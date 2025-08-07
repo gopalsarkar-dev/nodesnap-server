@@ -1,0 +1,6 @@
+version: 1
+directus: 11.9.3
+vendor: sqlite
+collections: []
+fields: []
+relations: []
