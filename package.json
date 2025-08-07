@@ -2,16 +2,20 @@
   "name": "nodesnap-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "directus start",
+    "db:migrate": "directus database migrate:latest",
+    "db:bootstrap": "directus bootstrap",
+    "db:snapshot": "directus schema snapshot ./db/snapshot.yaml",
+    "db:apply": "directus schema apply ./db/snapshot.yaml"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
-    "directus": "^11.9.3",
-    "sqlite3": "^5.1.7"
+    "directus": "11.9.3",
+    "sharp": "0.34.3",
+    "sqlite3": "5.1.7"
   }
 }
